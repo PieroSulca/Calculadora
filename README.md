@@ -6,7 +6,7 @@ La calculadora tiene un historial y un modo oscuro, además de un diseño respon
 Sitio web: https://pierosulca.github.io/Calculadora/
 
 ## Light Mode
-![Alt text](/CalculadoraCSS/img/lightMode.png "dos screenshots de la pagina en light mode, en una muestra la calculadora y la otra con el historial abierto")
+![Alt text](/img/lightMode.png "dos screenshots de la pagina en light mode, en una muestra la calculadora y la otra con el historial abierto")
 
 ## Dark Mode 
-![Alt text](/CalculadoraCSS/img/darkMode.png "dos screenshots de la pagina en dark mode, en una muestra la calculadora y la otra con el historial abierto")
+![Alt text](/img/darkMode.png "dos screenshots de la pagina en dark mode, en una muestra la calculadora y la otra con el historial abierto")
