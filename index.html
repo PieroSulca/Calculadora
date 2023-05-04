@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="">
+    <main>
+      <div class="theme-toggler">
+        <i class="toggler-icon"></i>
+        <i class="ri-moon-line"></i>
+        <i class="ri-sun-line"></i>
+      </div>
+      <div class="container">
+        <div class="historial-container">
+          <div class="historial-title">
+            <p>History</p>
+            <p class="historial-borrar">clear</p>
+          </div>
+          <div class="historial"></div>
+        </div>
+        <div class="display">
+          <div class="operando"></div>
+          <div class="parcial"></div>
+        </div>
+        <div class="calculadora">
+          <div>
+            <button class="btn-limpiar" id="limpiar">C</button>
+            <button class="btn-operacion">/</button>
+            <button class="btn-operacion">*</button>
+            <button class="btn-operacion" id="retroceder"><</button>
+          </div>
+          <div>
+            <button class="btn-numero">7</button>
+            <button class="btn-numero">8</button>
+            <button class="btn-numero">9</button>
+            <button class="btn-operacion">-</button>
+          </div>
+          <div>
+            <button class="btn-numero">4</button>
+            <button class="btn-numero">5</button>
+            <button class="btn-numero">6</button>
+            <button class="btn-operacion">+</button>
+          </div>
+          <div class="flex">
+            <div>
+              <div>
+                <button class="btn-numero">1</button>
+                <button class="btn-numero">2</button>
+                <button class="btn-numero">3</button>
+              </div>
+              <div>
+                <button class="btn-operacion">(</button>
+                <button class="btn-numero">0</button>
+                <button class="btn-operacion">)</button>
+              </div>
+            </div>
+            <div>
+              <button id="igual" class="btn-igual">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="historial-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </main>
+    <script type="text/javascript" src="scriptRefactorizado.js"></script>
+  </body>
+</html>

@@ -1,0 +1,447 @@
+:root {
+  --bg-color: #a8dadc;
+  --secondary-color: #457b9d;
+  --fg-color: #1d3557;
+  --clear-color: #e63946;
+
+  --dark-bg-color: #16213e;
+  --dark-secondary-color: #0f3460;
+  --dark-clear-color: #e94560;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  transition: all 1s ease;
+  font-family: sans-serif;
+}
+
+* {
+  transition: background-color 0.5s ease;
+  transition: color 0.5 ease;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  min-height: 300px;
+  background-color: var(--bg-color);
+}
+
+.theme-toggler {
+  position: absolute;
+  background-color: var(--bg-color);
+  box-shadow: 5px 5px 10px -3px #00000040;
+  cursor: pointer;
+  height: 20px;
+  width: 50px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-150%);
+  transition: all 0.5s ease;
+  border-radius: 1em;
+}
+
+.toggler-icon {
+  position: absolute;
+  background-color: var(--fg-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 1em;
+  transition: ease 0.5s all;
+}
+
+.ri-moon-line {
+  color: var(--fg-color);
+  position: absolute;
+  right: 2px;
+  line-height: 20px;
+}
+
+.ri-sun-line {
+  color: white;
+  position: absolute;
+  left: 2px;
+  line-height: 20px;
+}
+
+.container {
+  position: absolute;
+  border: 4px solid var(--fg-color);
+  border-radius: 3px;
+  padding: 10px;
+  min-width: 150px;
+  min-height: 225px;
+  max-height: 225px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.display {
+  height: 50px;
+  width: 125px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  padding: 4px;
+  position: relative;
+  margin-bottom: 5px;
+  text-align: end;
+  transition: 1s all ease;
+  box-shadow: 5px 5px 10px -3px #00000040, -4px -4px 10px -3px #00000040;
+  border-radius: 0.5em;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculadora {
+  margin-top: 10px;
+  position: relative;
+  height: 140px;
+  width: 123px;
+  user-select: none;
+  box-sizing: border-box;
+  transition: all 1s ease;
+}
+
+button {
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  border: none;
+  margin: 0.1em;
+  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+}
+
+.btn-numero {
+  background-color: var(--bg-color);
+}
+
+.btn-operacion {
+  background-color: var(--secondary-color);
+}
+
+.btn-limpiar {
+  background-color: var(--clear-color);
+}
+
+.btn-igual {
+  border-radius: 1rem;
+  height: 3.2rem;
+  background-color: var(--fg-color);
+  color: white;
+}
+
+.operando {
+  height: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  padding: 2px;
+}
+
+.operando::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 2px; /* Tamaño del scroll en horizontal */
+  /* display: none;   */
+}
+
+.operando::-webkit-scrollbar-thumb {
+  background: var(--fg-color);
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.operando::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.operando::-webkit-scrollbar-thumb:active {
+  background-color: var(--secondary-color);
+}
+
+.parcial {
+  height: 25px;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  padding: 2px;
+}
+
+.parcial::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 2px; /* Tamaño del scroll en horizontal */
+  /* display: none;   */
+}
+
+.parcial::-webkit-scrollbar-thumb {
+  background: var(--fg-color);
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.parcial::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.parcial::-webkit-scrollbar-thumb:active {
+  background-color: var(--secondary-color);
+}
+
+.historial-btn {
+  position: absolute;
+  background-color: var(--fg-color);
+  box-shadow: 5px 5px 10px -3px #00000040;
+  cursor: pointer;
+  height: 20px;
+  width: 25px;
+  top: 10%;
+  left: 50%;
+  transform: translate(200%);
+  transition: all 0.5s ease;
+  border-radius: 1em;
+}
+
+.ri-menu-line {
+  color: var(--bg-color);
+  position: absolute;
+  right: 4.5px;
+  line-height: 20px;
+}
+
+.historial-title {
+  height: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1s all ease;
+  background-color: var(--fg-color);
+  font-size: 0.6em;
+  color: transparent;
+}
+
+.historial-title > p {
+  margin: 0px;
+}
+
+.historial-title-historial-abierto {
+  padding-left: 5px;
+  padding-right: 8px;
+  height: 15px;
+  /* font-size: 0.6em; */
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.historial-borrar {
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9em;
+}
+
+.historial {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: end;
+  height: 0px;
+  width: 125px;
+  background-color: var(--fg-color);
+  transition: 1s all ease;
+  box-sizing: border-box;
+  overflow: auto;
+  box-shadow: 5px 5px 10px -3px #00000040;
+}
+
+.historial::-webkit-scrollbar {
+  width: 2px; /* Tamaño del scroll en vertical */
+  height: 2px; /* Tamaño del scroll en horizontal */
+  /* display: none;   */
+}
+
+.historial::-webkit-scrollbar-thumb {
+  background: var(--bg-color);
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.historial::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.historial::-webkit-scrollbar-thumb:active {
+  background-color: var(--secondary-color);
+}
+
+.historial-abierto {
+  height: 135px;
+  color: white;
+  padding: 5px;
+}
+
+.display-historial-abierto {
+  transition: 1s all ease;
+  border-radius: 0px 0px 0.5em 0.5em;
+}
+
+.calculadora-historial-abierto {
+  height: 0px;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.historial-display {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 30px;
+  align-items: end;
+  justify-content: end;
+  background-color: var(--fg-color);
+  transition: 1s all ease;
+  color: transparent;
+  box-sizing: border-box;
+}
+
+.historial-display-abierto {
+  font-size: 0.8em;
+  padding: 2px;
+  color: white;
+  border-top: 1px solid white;
+}
+
+.operando-historial, .parcial-historial {
+  font-size: 0.8em;
+}
+
+/* DARK MODE */
+
+.dark main {
+  background-color: var(--dark-bg-color);
+}
+
+.dark .theme-toggler {
+  background-color: var(--dark-bg-color);
+  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00000040;
+}
+
+.dark .ri-moon-line {
+  color: var(--dark-secondary-color);
+}
+
+.dark .toggler-icon {
+  background-color: white;
+  transform: translateX(30px);
+}
+
+.dark .container {
+  border-color: var(--dark-secondary-color);
+}
+
+.dark .display {
+  color: white;
+}
+
+.dark button {
+  cursor: pointer;
+  color: white;
+  box-shadow: 5px 5px 10px -3px #00000040;
+}
+
+.dark .btn-numero {
+  background-color: var(--dark-bg-color);
+}
+
+.dark .btn-operacion {
+  background-color: var(--dark-secondary-color);
+}
+
+.dark .btn-limpiar {
+  background-color: var(--dark-clear-color);
+}
+
+.dark .btn-igual {
+  background-color: var(--fg-color);
+}
+
+.dark .operando::-webkit-scrollbar-thumb {
+  background: var(--dark-fg-color);
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.dark .operando::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-secondary-color);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.dark .operando::-webkit-scrollbar-thumb:active {
+  background-color: var(--dark-secondary-color);
+}
+
+.dark .parcial::-webkit-scrollbar-thumb {
+  background: var(--dark-fg-color);
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.dark .parcial::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-secondary-color);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.dark .parcial::-webkit-scrollbar-thumb:active {
+  background-color: var(--dark-secondary-color);
+}
+
+@media (max-height: 340px) {
+  .theme-toggler {
+    top: 3%;
+  }
+
+  .historial-btn {
+    top: 3%;
+  }
+}
+
+.dark .historial-btn {
+  background-color: var(--dark-secondary-color);
+  box-shadow: 5px 5px 10px -3px #00000040;
+}
+
+.dark .ri-menu-line {
+  color: white;
+  position: absolute;
+  right: 4.5px;
+  line-height: 20px;
+}
+
+.dark .historial-display {
+  background-color: var(--dark-secondary-color);
+}
+
+.dark .historial {
+  background-color: var(--dark-secondary-color);
+}
+
+.dark .historial::-webkit-scrollbar-thumb {
+  background: var(--dark-bg-color);
+  border-radius: 4px;
+}
