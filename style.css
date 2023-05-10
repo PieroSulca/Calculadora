@@ -142,6 +142,11 @@ button {
   color: white;
 }
 
+#retroceder {
+  background-color: var(--fg-color);
+  color: white;
+}
+
 .operando {
   height: 45px;
   width: 100%;
