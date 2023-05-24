@@ -9,7 +9,6 @@ const historial = document.querySelector(".historial");
 const calculadora = document.querySelector(".calculadora");
 const historialTitle = document.querySelector(".historial-title");
 const historialBorar = document.querySelector(".historial-borrar");
-
 const historialStringStorage = localStorage.getItem("calculadora_historial");
 const historialStorage = JSON.parse(historialStringStorage);
 

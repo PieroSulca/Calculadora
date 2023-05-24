@@ -21,6 +21,13 @@ html {
   transition: background-color 0.5s ease;
   transition: color 0.5 ease;
   box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+
 }
 
 main {
@@ -98,7 +105,7 @@ main {
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .calculadora {
@@ -111,6 +118,10 @@ main {
   transition: all 1s ease;
 }
 
+.calculadora > div {
+  text-align: center;
+}
+
 button {
   font-size: 16px;
   cursor: pointer;
@@ -119,7 +130,7 @@ button {
   height: 3em;
   width: 2.7em;
   border: none;
-  margin: 0.1em;
+  margin: 0.1em auto;
   box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
 }
 
